@@ -12,6 +12,8 @@ struct Student {
 // Function to calculate average marks
 // It takes the array of students and the count as input
 float calculate_average(struct Student students[], int n) {
+    if (n == 0) return 0.0;
+    
     float sum = 0;
     for (int i = 0; i < n; i++) {
         sum += students[i].marks;
