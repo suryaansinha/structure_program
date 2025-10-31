@@ -37,7 +37,9 @@ void print_students_below_average(struct Student students[], int n, float averag
 }
 
 int main() {
-    int num_students = 5;
+    int num_students;
+    printf("How many students? ");
+    scanf("%d", &num_students);
     // Declare an array of Student structures directly
     struct Student studentArray[num_students];
 
