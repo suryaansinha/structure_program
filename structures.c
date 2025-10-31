@@ -46,7 +46,7 @@ int main() {
         scanf("%d", &studentArray[i].roll_no);
 
         printf("Name: ");
-        scanf("%s", studentArray[i].name); // Note: this will only read names without spaces.
+        scanf(" %[^\n]", studentArray[i].name); // Note: this will only read names without spaces.
 
         printf("Marks: ");
         scanf("%f", &studentArray[i].marks);
