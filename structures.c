@@ -46,12 +46,17 @@ int main() {
         scanf("%d", &studentArray[i].roll_no);
 
         printf("Name: ");
-        scanf(" %[^\n]", studentArray[i].name); // Note: this will only read names without spaces.
+        scanf(" %[^\n]", studentArray[i].name); 
 
         printf("Marks: ");
         scanf("%f", &studentArray[i].marks);
+    
+        if (marks < 0 || marks > 100) {
+            printf("Invalid marks! Enter between 0-100\n");
+            i--;  // Retry this student
+        continue;
+        }
     }
-
     // Print all student records
     printf("\n--- All Student Records ---\n");
     for (int i = 0; i < num_students; i++) {
